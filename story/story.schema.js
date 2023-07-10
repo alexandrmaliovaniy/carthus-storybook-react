@@ -5,8 +5,7 @@ module.exports = (config) => {
         template: config.LoadTemplate(__dirname, "story.template.tsx"),
         inject: {
             import: [
-                "import { ComponentMeta, ComponentStory } from \"@storybook/react\";",
-                "import { ComponentProps } from \"react\";"
+                "import { Meta, StoryObj } from \"@storybook/react\";"
             ]
         },
         overrides: [

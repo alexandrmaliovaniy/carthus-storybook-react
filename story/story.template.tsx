@@ -1,10 +1,12 @@
-export default {
+const meta: Meta<typeof {{ARGS.NAME}}> = {
     title: "{{ARGS.NAME}}",
     component: {{ARGS.NAME}}
-} as ComponentMeta<typeof {{ARGS.NAME}}>;
+};
 
-const Template = (args: ComponentProps<typeof {{ARGS.NAME}}>) => <{{ARGS.NAME}} {...args} />;
+export default meta;
 
-export const Default: ComponentStory<typeof {{ARGS.NAME}}> = Template.bind({});
+type Story = StoryObj<typeof {{ARGS.NAME}}>;
 
-Default.args = {};
+export const Primary: {{ARGS.NAME}} = {
+    render: () => <{{ARGS.NAME}} />,
+};
